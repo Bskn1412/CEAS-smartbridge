@@ -174,7 +174,6 @@ civil-engineering-insight-studio/
 ├── .env
 ├── requirements.txt
 ├── README.md
-└── assets/
 </code></pre>
 
 <hr/>
@@ -201,7 +200,7 @@ civil-engineering-insight-studio/
 
 <tr>
 <td>Response Time</td>
-<td>5–15 sec</td>
+<td>1–3 min</td>
 </tr>
 
 <tr>
