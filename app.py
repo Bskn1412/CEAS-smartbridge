@@ -11,9 +11,8 @@ from reportlab.pdfgen import canvas
 from dotenv import load_dotenv
 
 
-# -----------------------------
+
 # CONFIG
-# -----------------------------
 load_dotenv()
 
 API_KEY = os.getenv("NVIDIA_API_KEY")
@@ -25,9 +24,8 @@ MODEL = "meta/llama-3.2-90b-vision-instruct"
 HISTORY_FILE = "history.json"
 
 
-# -----------------------------
+
 # HISTORY
-# -----------------------------
 def load_history():
 
     if os.path.exists(HISTORY_FILE):
@@ -43,9 +41,7 @@ def save_history(data):
         json.dump(data, f, indent=2)
 
 
-# -----------------------------
 # PDF EXPORT
-# -----------------------------
 def create_pdf(entry):
 
     filename = f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
@@ -63,13 +59,11 @@ def create_pdf(entry):
 
     y -= 40
 
-
     # Date
     c.setFont("Helvetica", 10)
     c.drawString(40, y, f"Date: {entry['time']}")
 
     y -= 30
-
 
     # Prompt
     c.setFont("Helvetica-Bold", 12)
@@ -123,9 +117,7 @@ def create_pdf(entry):
     return filename
 
 
-# -----------------------------
 # STREAMLIT SETUP
-# -----------------------------
 st.set_page_config("Image AI Inspector", layout="wide")
 
 st.title("🏗️ Civil Engineering AI Studio")
@@ -140,9 +132,7 @@ if "history" not in st.session_state:
 history = st.session_state.history
 
 
-# -----------------------------
 # SIDEBAR
-# -----------------------------
 st.sidebar.title("📚 History")
 
 if history:
@@ -158,13 +148,10 @@ else:
     st.sidebar.info("No reports yet")
 
 
-# -----------------------------
 # MAIN UI
-# -----------------------------
 uploaded = st.file_uploader("Upload Image", ["jpg", "png", "jpeg"])
 
 prompt = st.text_input("Optional instruction")
-
 
 if uploaded:
 
@@ -177,7 +164,6 @@ if uploaded:
     img.save(buf, format="JPEG")
 
     img_b64 = base64.b64encode(buf.getvalue()).decode()
-
 
     if st.button("Analyze"):
 
@@ -235,9 +221,7 @@ if uploaded:
                 st.error("API Error")
 
 
-# -----------------------------
 # VIEW HISTORY
-# -----------------------------
 if selected is not None:
 
     st.divider()
