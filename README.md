@@ -1,101 +1,172 @@
-🏗️ Civil Engineering Insight Studio
-AI-Powered Image Analysis for Structural Inspection
+<h1 align="center">🏗️ Civil Engineering Insight Studio</h1>
 
-Civil Engineering Insight Studio is a web-based application that uses Artificial Intelligence to analyze construction and structural images. It helps engineers, students, and professionals quickly understand site conditions, identify visible defects, and generate inspection reports.
+<h3 align="center">AI-Powered Image Analysis for Structural Inspection</h3>
 
-Built with Streamlit and NVIDIA Vision AI, the platform provides instant image-based insights and maintains a history of inspections with PDF export support.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-blue.svg"/>
+  <img src="https://img.shields.io/badge/Streamlit-Web_App-red.svg"/>
+  <img src="https://img.shields.io/badge/NVIDIA-Vision_AI-green.svg"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
+</p>
 
-🚀 Features
+<hr/>
 
-📸 Upload construction/structure images
+<h2>📌 Overview</h2>
 
-🤖 AI-powered image analysis
+<p>
+Civil Engineering Insight Studio is a web-based application that uses Artificial Intelligence
+to analyze construction and structural images. It provides instant technical insights,
+automated reports, and maintains inspection history.
+</p>
 
-🏗️ Civil engineering–focused insights
+<hr/>
 
-📝 Automatic report generation
+<h2>🚀 Features</h2>
 
-📚 Persistent inspection history
+<ul>
+  <li>📸 Upload construction images</li>
+  <li>🤖 AI-powered visual analysis</li>
+  <li>🏗️ Engineering-focused insights</li>
+  <li>📝 Auto-generated reports</li>
+  <li>📚 Persistent history</li>
+  <li>📄 PDF export</li>
+  <li>🌐 Web-based interface</li>
+  <li>🔐 Secure API integration</li>
+</ul>
 
-📂 Sidebar history viewer
+<hr/>
 
-📄 Export reports as PDF
+<h2>📋 Prerequisites</h2>
 
-🌐 Web-based interface
+<ul>
+  <li>Python 3.9 or above</li>
+  <li>NVIDIA API Key</li>
+  <li>Internet connection</li>
+  <li>Git (optional)</li>
+</ul>
 
-🔐 Secure API key management
+<hr/>
 
-📋 Prerequisites
+<h2>🛠️ Technology Stack</h2>
 
-Before running this project, make sure you have:
+<table border="1" cellpadding="8">
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+</tr>
 
-Python 3.9+
+<tr>
+<td>Frontend</td>
+<td>Streamlit</td>
+</tr>
 
-NVIDIA API Key (NIM Platform)
+<tr>
+<td>Backend</td>
+<td>Python</td>
+</tr>
 
-Internet connection
+<tr>
+<td>AI Model</td>
+<td>NVIDIA NIM Vision</td>
+</tr>
 
-Git (optional)
+<tr>
+<td>Storage</td>
+<td>JSON</td>
+</tr>
 
-🛠️ Technology Stack
-Layer	Technology
-Frontend	Streamlit
-Backend	Python
-AI Model	NVIDIA NIM Vision (LLaMA / Kimi)
-Storage	JSON
-PDF Generator	ReportLab
-Image Processing	Pillow (PIL)
-📦 Installation
-1️⃣ Clone the Repository
+<tr>
+<td>PDF Export</td>
+<td>ReportLab</td>
+</tr>
+
+<tr>
+<td>Image Processing</td>
+<td>Pillow (PIL)</td>
+</tr>
+</table>
+
+<hr/>
+
+<h2>📦 Installation</h2>
+
+<h3>1️⃣ Clone Repository</h3>
+
+<pre><code>
 git clone https://github.com/your-username/civil-engineering-insight-studio.git
 cd civil-engineering-insight-studio
+</code></pre>
 
-2️⃣ Create Virtual Environment (Optional but Recommended)
+<hr/>
+
+<h3>2️⃣ Create Virtual Environment (Recommended)</h3>
+
+<pre><code>
 python -m venv venv
 source venv/bin/activate     # Linux / Mac
 venv\Scripts\activate        # Windows
+</code></pre>
 
-3️⃣ Install Dependencies
+<hr/>
+
+<h3>3️⃣ Install Dependencies</h3>
+
+<pre><code>
 pip install -r requirements.txt
+</code></pre>
 
+<p><b>OR</b></p>
 
-If requirements.txt is missing, install manually:
-
+<pre><code>
 pip install streamlit requests pillow python-dotenv reportlab
+</code></pre>
 
-4️⃣ Configure API Key
+<hr/>
 
-Create a .env file in the root directory:
+<h3>4️⃣ Configure API Key</h3>
 
+<p>Create a <code>.env</code> file:</p>
+
+<pre><code>
 NVIDIA_API_KEY=your_api_key_here
+</code></pre>
 
+<p>⚠️ Do not upload this file to GitHub.</p>
 
-⚠️ Do NOT upload this file to GitHub.
+<hr/>
 
-▶️ Usage
-Run the Application
+<h2>▶️ Usage</h2>
+
+<h3>Run Application</h3>
+
+<pre><code>
 streamlit run app.py
+</code></pre>
 
+<p>Open in browser:</p>
 
-The app will open in your browser:
-
+<pre><code>
 http://localhost:8501
+</code></pre>
 
-How to Use
+<hr/>
 
-Upload an image of a structure/site
+<h3>How to Use</h3>
 
-(Optional) Enter custom instruction
+<ol>
+  <li>Upload image</li>
+  <li>Enter optional prompt</li>
+  <li>Click Analyze</li>
+  <li>View result</li>
+  <li>Check sidebar history</li>
+  <li>Export PDF</li>
+</ol>
 
-Click Analyze
+<hr/>
 
-View AI-generated insights
+<h2>📁 Project Structure</h2>
 
-Access past reports in sidebar
-
-Export PDF if required
-
-📁 Project Structure
+<pre><code>
 civil-engineering-insight-studio/
 │
 ├── app.py
@@ -104,91 +175,127 @@ civil-engineering-insight-studio/
 ├── requirements.txt
 ├── README.md
 └── assets/
+</code></pre>
 
-📄 Report History System
+<hr/>
 
-All inspections are stored in history.json
+<h2>📄 History Management</h2>
 
-Accessible from sidebar
+<ul>
+  <li>Stored in <code>history.json</code></li>
+  <li>Accessible via sidebar</li>
+  <li>Persistent storage</li>
+  <li>Supports PDF export</li>
+</ul>
 
-Persists after closing browser
+<hr/>
 
-Supports PDF export
+<h2>🧪 Performance</h2>
 
-🧪 Performance
-Parameter	Value
-Avg Response Time	5–15 sec
-Image Size Limit	~1 MB
-PDF Generation	< 3 sec
-Concurrent Users	Local Only
-⚠️ Limitations
+<table border="1" cellpadding="8">
 
-Depends on API availability
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
 
-Free tier has rate limits
+<tr>
+<td>Response Time</td>
+<td>5–15 sec</td>
+</tr>
 
-Internet required
+<tr>
+<td>Image Size</td>
+<td>&lt; 1 MB</td>
+</tr>
 
-AI output may vary
+<tr>
+<td>PDF Generation</td>
+<td>&lt; 3 sec</td>
+</tr>
 
-Not a replacement for physical inspection
+<tr>
+<td>Concurrent Users</td>
+<td>Local</td>
+</tr>
 
-🔮 Future Enhancements
+</table>
 
-Mobile application
+<hr/>
 
-User authentication
+<h2>⚠️ Limitations</h2>
 
-Cloud database
+<ul>
+  <li>Requires internet</li>
+  <li>Free API limits</li>
+  <li>Depends on AI accuracy</li>
+  <li>No physical inspection</li>
+</ul>
 
-Drone image integration
+<hr/>
 
-Real-time monitoring
+<h2>🔮 Future Scope</h2>
 
-BIM integration
+<ul>
+  <li>Mobile App</li>
+  <li>User Login</li>
+  <li>Cloud Database</li>
+  <li>Drone Integration</li>
+  <li>BIM Support</li>
+  <li>Real-Time Monitoring</li>
+</ul>
 
-Multi-language support
+<hr/>
 
-🤝 Contributing
+<h2>🤝 Contributing</h2>
 
-Contributions are welcome!
+<ol>
+  <li>Fork repository</li>
+  <li>Create branch</li>
+  <li>Commit changes</li>
+  <li>Submit pull request</li>
+</ol>
 
-Steps:
+<hr/>
 
-Fork repository
+<h2>📜 License</h2>
 
-Create branch
+<p>
+This project is licensed under the <b>MIT License</b>.
+</p>
 
-Commit changes
+<hr/>
 
-Submit pull request
+<h2>👨‍💻 Author</h2>
 
-📜 License
+<p>
+<b>Name:</b> Your Name <br/>
+<b>Department:</b> Civil Engineering <br/>
+<b>Institution:</b> Your College Name
+</p>
 
-This project is licensed under the MIT License.
+<hr/>
 
-You are free to use, modify, and distribute it for academic and commercial purposes.
+<h2>📞 Support</h2>
 
-👨‍💻 Author
+<ul>
+  <li>Open GitHub issue</li>
+  <li>Contact maintainer</li>
+  <li>Refer NVIDIA Docs</li>
+</ul>
 
-Developed by: [Your Name]
-Department: Civil Engineering
-Institution: [Your College Name]
+<hr/>
 
-📞 Support
+<h2>⭐ Acknowledgements</h2>
 
-If you face any issues:
+<ul>
+  <li>NVIDIA AI Platform</li>
+  <li>Streamlit Community</li>
+  <li>Open Source Contributors</li>
+</ul>
 
-Open an issue on GitHub
+<hr/>
 
-Contact the maintainer
-
-Refer to NVIDIA NIM Docs
-
-⭐ Acknowledgements
-
-NVIDIA AI Platform
-
-Streamlit Community
-
-Open Source Contributors
+<p align="center">
+⭐ If you like this project, please star the repository!
+</p>
